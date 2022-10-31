@@ -15,10 +15,30 @@ function setup(){
   for(let i = 0; i < n; i++){ line(0, height * i / n, width, height * i / n); }
 
   // ここからが本番
-  fill(0);
   const dx = width / scores.length;
-  let px, py; // 線を引くために一つ前の点を覚えておく変数
-  for(let i = 0; i < scores.length; i++){
-    // BLANK[1]
+  let px, py;
+  
+  
+  for(let i = 0; i < n; i++){
+  fill(0);
+  ellipse((i + 1) * 37 , scores[i], 10)
+  
+  noFill();
+  line(px, py, (i + 1) * 37, scores[i])
+  px = (i + 1) * 37
+  py = scores[i]
+  
   }
+//   fill(0);
+//   for(let i = 0; i < n; i++){
+//   ellipse((i + 1) * 37 , scores[i], 10)
+//   px = (i + 1) * 37
+//   py = scores[i]
+//   }
+
+//   for(let i = 0; i < scores.length; i++){
+//     noFill();
+//     line(px, py, (i + 1) * 37, scores[i])
+//     // BLANK[1]
+  // }
 }

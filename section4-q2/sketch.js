@@ -11,8 +11,22 @@ function setup(){
   }
 
   // 円グラフを描くには割合が必要なので合計を計算しておく
-  let total = 0;
-  for(let i = 0; i < scores.length; i++){ total += scores[i]; }
+    let total = 0;
+    let startAngle = 0;
+    
+    for(let i = 0; i < scores.length; i++){   
+    total += scores[i]; 
+    }
+    
+  
+  for(let i = 0; i < 10; i++){
+    stroke(0);
+    let endAngle = scores[i] / total * 360 * ( 3.14 / 180 );
+    arc(200, 200, 300, 300, startAngle, endAngle);
+    startAngle = endAngle;
+  }
+ 
 
-  // BLANK[1]
+  // BLANK[1] 
+  
 }
