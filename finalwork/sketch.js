@@ -19,6 +19,8 @@ function setup(){
   text("2", 190, 430);
   text("3", 315, 430);
   text("Guide", 177, 470)
+  text("キーボードの1~3を押してください", 105, 500)
+  text("確認するにはGを押してください", 110, 520)
 }
 
 function keyPressed(){
